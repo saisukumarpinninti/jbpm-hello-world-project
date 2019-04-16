@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmn20="http://www.omg.org/bpmn20" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns="http://www.jboss.org/drools" xmlns:ns="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" id="_LkfXYF-FEem6753jXjHE4A" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.0.Final-v20180515-1642-B1" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:process id="hello-world-project.print-name" drools:packageName="com.myspace.hello_world_project" drools:version="1.0" drools:adHoc="false" name="print-name" isExecutable="true">
+    <bpmn2:sequenceFlow id="_C9845FEB-DC80-475A-84B4-907DCB33B60F" sourceRef="_B8406FF5-D331-43B8-BDB1-908A4DF62B9A" targetRef="_81CFBFCA-10C5-4E25-8529-BFC4C09E356B">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_446DAE48-8456-4068-8DEA-DCCF2A6D362C" sourceRef="_7477B785-2C21-48FB-9AFD-F080B5FFB48A" targetRef="_B8406FF5-D331-43B8-BDB1-908A4DF62B9A">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:scriptTask id="_B8406FF5-D331-43B8-BDB1-908A4DF62B9A" name="print name" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[print name]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_446DAE48-8456-4068-8DEA-DCCF2A6D362C</bpmn2:incoming>
+      <bpmn2:outgoing>_C9845FEB-DC80-475A-84B4-907DCB33B60F</bpmn2:outgoing>
+      <bpmn2:script>System.out.println(&quot;Hello World pradeep...&quot;);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:endEvent id="_81CFBFCA-10C5-4E25-8529-BFC4C09E356B" name="stop">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[stop]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_C9845FEB-DC80-475A-84B4-907DCB33B60F</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_7477B785-2C21-48FB-9AFD-F080B5FFB48A" name="start">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[start]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_446DAE48-8456-4068-8DEA-DCCF2A6D362C</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_LkfXYV-FEem6753jXjHE4A">
+    <bpmndi:BPMNPlane id="_LkfXYl-FEem6753jXjHE4A" bpmnElement="hello-world-project.print-name">
+      <bpmndi:BPMNShape id="shape__7477B785-2C21-48FB-9AFD-F080B5FFB48A" bpmnElement="_7477B785-2C21-48FB-9AFD-F080B5FFB48A">
+        <dc:Bounds height="56.0" width="56.0" x="100.0" y="100.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="11.0" width="18.0" x="119.0" y="156.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__81CFBFCA-10C5-4E25-8529-BFC4C09E356B" bpmnElement="_81CFBFCA-10C5-4E25-8529-BFC4C09E356B">
+        <dc:Bounds height="56.0" width="56.0" x="456.0" y="100.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="11.0" width="18.0" x="475.0" y="156.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__B8406FF5-D331-43B8-BDB1-908A4DF62B9A" bpmnElement="_B8406FF5-D331-43B8-BDB1-908A4DF62B9A">
+        <dc:Bounds height="102.0" width="154.0" x="222.0" y="77.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="11.0" width="43.0" x="277.0" y="122.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__7477B785-2C21-48FB-9AFD-F080B5FFB48A_to_shape__B8406FF5-D331-43B8-BDB1-908A4DF62B9A" bpmnElement="_446DAE48-8456-4068-8DEA-DCCF2A6D362C" sourceElement="shape__7477B785-2C21-48FB-9AFD-F080B5FFB48A" targetElement="shape__B8406FF5-D331-43B8-BDB1-908A4DF62B9A">
+        <di:waypoint xsi:type="dc:Point" x="156.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="222.0" y="128.0"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__B8406FF5-D331-43B8-BDB1-908A4DF62B9A_to_shape__81CFBFCA-10C5-4E25-8529-BFC4C09E356B" bpmnElement="_C9845FEB-DC80-475A-84B4-907DCB33B60F" sourceElement="shape__B8406FF5-D331-43B8-BDB1-908A4DF62B9A" targetElement="shape__81CFBFCA-10C5-4E25-8529-BFC4C09E356B">
+        <di:waypoint xsi:type="dc:Point" x="376.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="456.0" y="128.0"/>
+        <bpmndi:BPMNLabel/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
