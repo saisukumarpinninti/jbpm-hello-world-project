@@ -1,1 +1,19 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <kmodule xmlns="http://www.drools.org/xsd/kmodule">
+
+    <bean id="rabbitConnectionFactory" class="org.springframework.amqp.rabbit.connection.CachingConnectionFactory">
+      <property name="host" value="localhost"/>
+      <property name="port" value="5672"/>
+      <property name="username" value="guest"/>
+      <property name="password" value="guest"/>
+    </bean>
+
+    <bean id="rabbitTemplate" class="org.springframework.amqp.rabbit.core.RabbitTemplate">
+      <property name="connectionFactory" ref="rabbitConnectionFactory"/>
+    </bean>
+
+  </kmodule>
+
+</beans>
