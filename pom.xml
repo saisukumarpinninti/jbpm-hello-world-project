@@ -18,13 +18,8 @@
    <dependency>
   <groupId>com.rabbitmq</groupId>
   <artifactId>amqp-client</artifactId>
-  <version>5.13.0</version>
-</dependency>
-      <dependency>
-    <groupId>io.micrometer</groupId>
-    <artifactId>micrometer-core</artifactId>
-    <version>1.7.2</version>
-</dependency>
+  <version>5.9.0</version>
+      </dependency>
     <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-internal</artifactId>
